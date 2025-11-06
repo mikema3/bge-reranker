@@ -1,5 +1,6 @@
 # BGE Reranker v2-m3 - CPU Optimized FastAPI Server
 # Designed for Google Cloud Run deployment
+# Triggers Docker build on push to main
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
