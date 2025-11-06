@@ -1,15 +1,16 @@
 name: Build and Push to GCR
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'app.py'
-      - 'requirements.txt'
-      - 'Dockerfile'
-      - '.github/workflows/google-cloud-build.yml'
-  workflow_dispatch:
+  # Disabled by default - enable when GCP secrets are configured
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'app.py'
+  #     - 'requirements.txt'
+  #     - 'Dockerfile'
+  #     - '.github/workflows/google-cloud-build.yml'
+  workflow_dispatch:  # Only manual trigger until secrets are added
 
 env:
   PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
