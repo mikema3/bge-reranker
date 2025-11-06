@@ -1,4 +1,31 @@
-# README for BGE Reranker v2-m3 Deployment
+# BGE Reranker v2-m3 - Production API
+
+[![Build and Push Docker Image](https://github.com/mikema3/bge-reranker/actions/workflows/docker-build.yml/badge.svg)](https://github.com/mikema3/bge-reranker/actions/workflows/docker-build.yml)
+[![Docker Pulls](https://img.shields.io/docker/pulls/mikema3/bge-reranker)](https://hub.docker.com/r/mikema3/bge-reranker)
+
+Production-ready CPU-optimized reranker API for RAG pipelines.
+
+## 🚀 Quick Start
+
+Pull from Docker Hub and run:
+```bash
+docker pull mikema3/bge-reranker:latest
+docker run -p 8080:8080 mikema3/bge-reranker:latest
+```
+
+Visit http://localhost:8080/docs for API documentation.
+
+## 📊 Performance
+
+**Tested on laptop CPU:**
+- 10 documents: ~1.2s (8.5 docs/sec)
+- 100 documents: ~4.8s (21 docs/sec)  
+- Throughput: ~5 req/sec
+
+**Production (Cloud Run 2 vCPU):**
+- Expected: 10-20 req/sec
+- Latency: <200ms
+- Auto-scales 0-10 instances
 
 ## Overview
 
